@@ -40,7 +40,7 @@ import React, { Component } from 'react';
 
 // const TVEventHandler = require('TVEventHandler');
 
-import { Animated, Platform, StyleSheet, View, TVEventHandler } from 'react-native';
+import { Animated, Platform, StyleSheet, View, ViewPropTypes, TVEventHandler } from 'react-native';
 
 import type {
   NavigationSceneRendererProps,
@@ -105,9 +105,9 @@ class NavigationHeader extends React.PureComponent<DefaultProps, Props, any> {
     renderLeftComponent: PropTypes.func,
     renderRightComponent: PropTypes.func,
     renderTitleComponent: PropTypes.func,
-    style: View.propTypes.style,
+    style: ViewPropTypes.style,
     statusBarHeight: PropTypes.number,
-    viewProps: PropTypes.shape(View.propTypes),
+    viewProps: PropTypes.shape(ViewPropTypes),
   };
 
   _tvEventHandler: TVEventHandler;
